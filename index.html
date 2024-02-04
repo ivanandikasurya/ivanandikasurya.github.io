@@ -1,1 +1,115 @@
-udah ah malu banget
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Semangat</title>
+    <style>
+      .fade-in-out {
+        transition: opacity 0.5s ease-in-out;
+      }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+    <div id="container" style="height: 100vh;" class="d-flex flex-column w-100 justify-content-center align-items-center">
+      <img id="motivationalGif" class="img-fluid mb-4 fade-in-out" style="height: 180px;" src="https://media.tenor.com/1jrUvITt1QcAAAAi/github-sticker.gif" alt="">
+      <a id="motivationalText" class="text-decoration-none text-black fade-in-out" href="#">just click!</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+      const motivationalText = document.getElementById('motivationalText');
+      const motivationalGif = document.getElementById('motivationalGif');
+      const motivations = [
+      "Ayok, Kak Putriii, semangat pagi!",
+    "Kak Putriii, mantapkan hati!",
+    "Hey, Kak Putriii, kamu keren banget!",
+    "Semangat, Kak Putriii, kamu rock!",
+    "Kak Putriii, kakak lawan hari ini!",
+    "Waktunya bersinar, Kak Putriii!",
+    "Kak Putriii, ayo senyum!",
+    "Kak Putriii, keep calm and carry on!",
+    "Kak Putriii, Semangat terus ya!",
+    "Kak Putriii, kakak bisa lalui ini dengan baik!",
+    "Ada Kak Putriii, ada semangat!",
+    "Kak Putriii, jangan lupa bersantai sejenak!",
+    "Kerennn, Kak Putriii! Kamu bisa melakukannya!",
+    "Kak Putriii, jangan terlalu serius ya!",
+    "Mana senyummu Kak Putriii",
+    "Ayo Kak Putriii, kakak tunjukkan siapa yang terbaik!",
+    "Kak Putriii, terus bergerak!",
+    "Kamu hebat Kak Putriii, percayalah!",
+    "Kak Putriii, jangan lupa istirahat sejenak ya!",
+    "Mantap, Kak Putriii, kakak bisa melewatinya!",
+    "Kak Putriii, hari ini adalah milikmu!",
+    "Kamu ngga sendirian Kak Putriii!",
+    "Kak Putriii, ayo semangat!",
+    "Kak Putriii, jangan ragu-ragu",
+    "Kak Putriii, taklukkan hari ini!",
+    "Kak Putriii, bersenang-senanglah sebentar!",
+    "Hidupmu indah Kak Putriii!",
+    "Kak Putriii, teruslah bersinar!",
+    "Ayo, Kak Putriii, jangan menyerah!",
+    "Kamu luar biasa Kak Putriii!",
+    "Kak Putriii, ini adalah awal yang baru!",
+    "Bersenang-senanglah, Kak Putriii, kamu layak!",
+    "Kak Putriii, terus bersemangat seperti ini!",
+    "Kak Putriii, nikmati saja!",
+    "Semangat Kak Putriii, kamu pasti bisa!",
+    "Kak Putriii, jangan lupa untuk tersenyum!",
+    "Kakak buat hari ini luar biasa, Kak Putriii!",
+    "Kak Putriii, nikmati setiap progresnya!",
+    "Kamu pemberani Kak Putriii, teruslah!",
+    "Kak Putriii, bersantailah sejenak!",
+    "Semangat, Kak Putriii, kamu pemenang!",
+    "Kak Putriii, jangan takut untuk mencoba!",
+    "Ayo, Kak Putriii, tunjukkan keajaibanmu!",
+    "Kak Putriii, jadikan hari ini luar biasa!",
+    "Teruslah bersinar, Kak Putriii, dunia menunggumu!"
+    ];
+      const gifLinks = [
+        "https://media.tenor.com/a7qa0Uk3F30AAAAi/peach-goma-peach-and-goma.gif",
+        "https://media.tenor.com/_mdYvTBsU2sAAAAi/tkthao219-peach-goma.gif",
+        "https://media.tenor.com/laUPAXXjuZcAAAAi/cats-white-cat.gif",
+        "https://media.tenor.com/wa9joT3KeXUAAAAi/peach-and-goma-peach-goma.gif",
+        "https://media.tenor.com/RCf7dH4ApKkAAAAi/chips-crisps.gif",
+        "https://media.tenor.com/OI-Xn-5JTcEAAAAi/peach-goma-happy-side-to-side.gif",
+        "https://media.tenor.com/t7yxNky6vVoAAAAi/sebusun-mocha.gif",
+        "https://media.tenor.com/oGpz_hpmmTQAAAAi/cute.gif",
+        "https://media.tenor.com/B90M86eYw0cAAAAi/cute-mochi-mochi.gif",
+        "https://media.tenor.com/8Qnp0xmjYsYAAAAi/peach-goma.gif"
+      ];
+      let currentIndex = 0;
+
+      document.addEventListener("DOMContentLoaded", function() {
+          const currentTime = new Date();
+          const currentHour = currentTime.getHours();
+
+          // Jika waktu lebih dari atau sama dengan 18:00 (6 PM), tambahkan kelas bg-dark dan text-light
+          if (currentHour >= 18) {
+              const motivationalContainer = document.getElementById("container");
+              const motivations = document.getElementById("motivationalText");
+              motivationalContainer.classList.add('bg-dark');
+              motivations.classList.add('text-white');
+          }
+      });
+
+
+      motivationalText.addEventListener('click', () => {
+        const randomIndexMotivation = Math.floor(Math.random() * motivations.length);
+        const randomIndexGif = Math.floor(Math.random() * gifLinks.length);
+        
+        motivationalGif.style.opacity = '0';
+        motivationalText.style.opacity = '0';
+
+        setTimeout(() => {
+          motivationalText.textContent = motivations[randomIndexMotivation];
+          motivationalGif.src = gifLinks[randomIndexGif];
+          motivationalText.style.opacity = '1';
+          motivationalGif.style.opacity = '1';
+        }, 500);
+      });
+    </script>
+  </body>
+</html>
