@@ -4,84 +4,100 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Semangat</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
       .fade-in-out {
-        transition: opacity 1s ease-in-out;
+        transition: opacity 0.5s ease-in-out;
       }
     </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
   <body>
-    <div style="height: 100vh;" class="d-flex w-100 bg-dark justify-content-center align-items-center">
-      <a id="motivationalText" class="text-decoration-none text-white" href="#">Klik!</a>
+    <div style="height: 100vh;" class="d-flex flex-column w-100 justify-content-center align-items-center">
+      <img id="motivationalGif" class="img-fluid mb-4 fade-in-out" style="height: 180px;" src="https://media.tenor.com/1jrUvITt1QcAAAAi/github-sticker.gif" alt="">
+      <a id="motivationalText" class="text-decoration-none text-black fade-in-out" href="#">click me</a>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script>
       const motivationalText = document.getElementById('motivationalText');
+      const motivationalGif = document.getElementById('motivationalGif');
       const motivations = [
-      "Ayok, Putri, semangat pagi!",
-    "Putri, mantapkan hati, yuk!",
-    "Hey, Putri, kamu keren banget!",
-    "Semangat, Putri, kamu rock!",
-    "Putri, yuk, kita lawan hari ini!",
-    "Waktunya bersinar, Putri!",
-    "Putri, ayo mulai hari dengan senyuman!",
-    "Putri, keep calm and carry on!",
-    "Apa kabar, Putri? Semangat terus ya!",
-    "Putri, kita bisa lalui ini dengan baik!",
-    "Ada Putri, ada semangat!",
-    "Putri, jangan lupa bersantai sejenak!",
-    "Horee, Putri! Kamu bisa melakukannya!",
-    "Putri, jangan terlalu serius ya!",
-    "Gelar senyummu, Putri!",
-    "Ayo, Putri, kita tunjukkan siapa yang terbaik!",
-    "Putri, yuk kita bergerak!",
-    "Kamu hebat, Putri, percayalah!",
-    "Putri, jangan lupa istirahat sejenak ya!",
-    "Mantap, Putri, kita bisa melewatinya!",
-    "Putri, hari ini adalah milikmu!",
-    "Kamu tak sendirian, Putri!",
-    "Horee, Putri, ayo mulai petualangan baru!",
-    "Putri, jangan ragu-ragu",
-    "Putri, taklukkan hari ini!",
-    "Putri, bersenang-senanglah sebentar!",
-    "Hidup itu indah, ya, Putri?",
-    "Putri, teruslah bersinar seperti bintang!",
-    "Ayo, Putri, jangan menyerah!",
-    "Kamu luar biasa, Putri, jangan lupa!",
-    "Putri, hari ini adalah awal yang baru!",
-    "Bersenang-senanglah, Putri, kamu layak!",
-    "Putri, terus bersemangat seperti ini!",
-    "Hidup itu perjalanan, Putri, nikmati saja!",
-    "Semangat, Putri, kamu pasti bisa!",
-    "Putri, jangan lupa untuk tersenyum!",
-    "Mari kita buat hari ini luar biasa, Putri!",
-    "Putri, ayo nikmati setiap momen!",
-    "Kamu pemberani, Putri, teruslah!",
-    "Putri, bersantailah sejenak!",
-    "Semangat, Putri, kamu pemenang!",
-    "Putri, jangan takut untuk mencoba!",
-    "Hidup itu petualangan, Putri, nikmati saja!",
-    "Putri, jangan lupa untuk bersenang-senang!",
-    "Ayo, Putri, tunjukkan keajaibanmu!",
-    "Putri, jadikan hari ini luar biasa!",
-    "Teruslah bersinar, Putri, dunia menunggumu!"
+      "Ayok, Kak Putriii, semangat pagi!",
+    "Kak Putriii, mantapkan hati, yuk!",
+    "Hey, Kak Putriii, kamu keren banget!",
+    "Semangat, Kak Putriii, kamu rock!",
+    "Kak Putriii, yuk, kakak lawan hari ini!",
+    "Waktunya bersinar, Kak Putriii!",
+    "Kak Putriii, ayo mulai hari dengan senyuman!",
+    "Kak Putriii, keep calm and carry on!",
+    "Apa kabar, Kak Putriii? Semangat terus ya!",
+    "Kak Putriii, kakak bisa lalui ini dengan baik!",
+    "Ada Kak Putriii, ada semangat!",
+    "Kak Putriii, jangan lupa bersantai sejenak!",
+    "Horee, Kak Putriii! Kamu bisa melakukannya!",
+    "Kak Putriii, jangan terlalu serius ya!",
+    "Gelar senyummu, Kak Putriii!",
+    "Ayo, Kak Putriii, kakak tunjukkan siapa yang terbaik!",
+    "Kak Putriii, yuk kakak bergerak!",
+    "Kamu hebat, Kak Putriii, percayalah!",
+    "Kak Putriii, jangan lupa istirahat sejenak ya!",
+    "Mantap, Kak Putriii, kakak bisa melewatinya!",
+    "Kak Putriii, hari ini adalah milikmu!",
+    "Kamu tak sendirian, Kak Putriii!",
+    "Horee, Kak Putriii, ayo mulai petualangan baru!",
+    "Kak Putriii, jangan ragu-ragu",
+    "Kak Putriii, taklukkan hari ini!",
+    "Kak Putriii, bersenang-senanglah sebentar!",
+    "Hidup itu indah, ya, Kak Putriii?",
+    "Kak Putriii, teruslah bersinar seperti bintang!",
+    "Ayo, Kak Putriii, jangan menyerah!",
+    "Kamu luar biasa, Kak Putriii, jangan lupa!",
+    "Kak Putriii, hari ini adalah awal yang baru!",
+    "Bersenang-senanglah, Kak Putriii, kamu layak!",
+    "Kak Putriii, terus bersemangat seperti ini!",
+    "Hidup itu perjalanan, Kak Putriii, nikmati saja!",
+    "Semangat, Kak Putriii, kamu pasti bisa!",
+    "Kak Putriii, jangan lupa untuk tersenyum!",
+    "Mari kakak buat hari ini luar biasa, Kak Putriii!",
+    "Kak Putriii, ayo nikmati setiap momen!",
+    "Kamu pemberani, Kak Putriii, teruslah!",
+    "Kak Putriii, bersantailah sejenak!",
+    "Semangat, Kak Putriii, kamu pemenang!",
+    "Kak Putriii, jangan takut untuk mencoba!",
+    "Hidup itu petualangan, Kak Putriii, nikmati saja!",
+    "Kak Putriii, jangan lupa untuk bersenang-senang!",
+    "Ayo, Kak Putriii, tunjukkan keajaibanmu!",
+    "Kak Putriii, jadikan hari ini luar biasa!",
+    "Teruslah bersinar, Kak Putriii, dunia menunggumu!"
+    ];
+      const gifLinks = [
+        "https://media.tenor.com/a7qa0Uk3F30AAAAi/peach-goma-peach-and-goma.gif",
+        "https://media.tenor.com/_mdYvTBsU2sAAAAi/tkthao219-peach-goma.gif",
+        "https://media.tenor.com/laUPAXXjuZcAAAAi/cats-white-cat.gif",
+        "https://media.tenor.com/wa9joT3KeXUAAAAi/peach-and-goma-peach-goma.gif",
+        "https://media.tenor.com/RCf7dH4ApKkAAAAi/chips-crisps.gif",
+        "https://media.tenor.com/OI-Xn-5JTcEAAAAi/peach-goma-happy-side-to-side.gif",
+        "https://media.tenor.com/t7yxNky6vVoAAAAi/sebusun-mocha.gif",
+        "https://media.tenor.com/oGpz_hpmmTQAAAAi/cute.gif",
+        "https://media.tenor.com/B90M86eYw0cAAAAi/cute-mochi-mochi.gif",
+        "https://media.tenor.com/8Qnp0xmjYsYAAAAi/peach-goma.gif"
       ];
       let currentIndex = 0;
 
       motivationalText.addEventListener('click', () => {
-        const randomIndex = Math.floor(Math.random() * motivations.length);
-        const randomMotivation = motivations[randomIndex];
-
+        const randomIndexMotivation = Math.floor(Math.random() * motivations.length);
+        const randomIndexGif = Math.floor(Math.random() * gifLinks.length);
+        
+        motivationalGif.style.opacity = '0';
         motivationalText.style.opacity = '0';
+
         setTimeout(() => {
-        motivationalText.textContent = randomMotivation;
-        motivationalText.style.opacity = '1';
+          motivationalText.textContent = motivations[randomIndexMotivation];
+          motivationalGif.src = gifLinks[randomIndexGif];
+          motivationalText.style.opacity = '1';
+          motivationalGif.style.opacity = '1';
         }, 500);
-    });
-
-
+      });
     </script>
   </body>
 </html>
