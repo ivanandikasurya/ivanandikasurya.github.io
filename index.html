@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Semangat Kak!</title>
+    <title>Semangat</title>
     <style>
       .fade-in-out {
         transition: opacity 0.5s ease-in-out;
@@ -90,18 +90,24 @@
       let currentIndex = 0;
 
       document.addEventListener("DOMContentLoaded", function() {
-          const currentTime = new Date();
-          const currentHour = currentTime.getHours();
+        const currentTime = new Date();
+        const currentHour = currentTime.getHours();
+        console.log(currentHour)
 
-          // Jika waktu lebih dari atau sama dengan 18:00 (6 PM), tambahkan kelas bg-dark dan text-light
-          if (currentHour >= 18) {
-              const motivationalContainer = document.getElementById("container");
-              const motivations = document.getElementById("motivationalText");
-              motivationalContainer.classList.add('bg-dark');
-              motivations.classList.add('text-white');
-          }
+        // Jika waktu lebih dari atau sama dengan 18:00 (6 PM), tambahkan kelas bg-dark dan text-light
+        if (currentHour >= 18) {
+            const motivationalContainer = document.getElementById("container");
+            const motivations = document.getElementById("motivationalText");
+            motivationalContainer.classList.add('bg-dark');
+            motivations.classList.add('text-white');
+        } else if (currentHour >= 6) {
+            // Jika waktu lebih awal dari jam 06:00 pagi, hapus kelas yang ditambahkan sebelumnya
+            const motivationalContainer = document.getElementById("container");
+            const motivations = document.getElementById("motivationalText");
+            motivationalContainer.classList.remove('bg-dark');
+            motivations.classList.remove('text-white');
+        }
       });
-
 
       motivationalText.addEventListener('click', () => {
         const randomIndexMotivation = Math.floor(Math.random() * motivations.length);
